@@ -1,0 +1,31 @@
+				LANGKAH LANKAH RUNNING PROYEK
+
+1. difolder terluar jalankan scrapy startproject pariwisata di terminal
+
+2. di folder pariwisata/pariwisata/spiders jalankan code kategori.py di terminal dengan perintah (scrapy crawl pariwisata_kategori -o kategori.json) nanti akan mendapatkan output kategori.json
+
+3. di folder pariwisata/pariwisata/spiders jalankan code subkategori.py di terminal dengan perintah (scrapy crawl pariwisata_subkategori -o subkategori.json) nanti akan mendapatkan output subkategori.json
+
+4. 3. di folder pariwisata/pariwisata/spiders jalankan code crawl_subkategori.py di terminal dengan perintah (scrapy crawl pariwisata_crawl_subkategori -o crawl_subkategori.json) nanti akan mendapatkan output crawl_subkategori.json
+
+5. penggabungan dari 2 file json yaitu crawl_subkategori.json dan kategori.json dengan menjalankan script di all_json.py dan akan mendapatkan output all.json
+
+6. kembali ke folder pariwisata/pariwisatamembuat file baru stopword.txt (terserah isinya bebas, walaupun tidak ada isinya tidak apa apa)
+
+7. masih di folder pariwisata/pariwisata dan menjalankan bm25.py di terminal dengan perintah (python bm25.py all.json indexdb) nanti akan menghasilkan output file pkl (indexdb)
+
+8. masih di folder pariwisata/pariwisata dan jalankan script di query.py diterminal dengan perintah (python query.py indexdb 5 "air terjun" 
+
+9. jika sudah mendapatkan hasil dari kata air dan terjun, maka pencarian berhasil
+
+10. masuk ke bagian UI (Flask)
+
+11. folder templates untuk menjalankan UI nya atau frontend nya 
+
+12. folder static unutk menyimpan cssnya atau jsnya 
+
+13. file app.py untuk menjalankan backend nya 
+
+14. run app.py diterminal (python app.py)
+
+15. masuk ke halaman web pencarian 

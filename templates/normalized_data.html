@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalized Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            hljs.highlightAll();
+        });
+    </script>
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1>Normalized Data</h1>
+        <pre><code class="json">{{ normalized | tojson(indent=4) }}</code></pre>
+    </div>    
+    {% include 'footer.html' %}
+</body>
+</html>

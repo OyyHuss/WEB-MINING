@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Preprocessing</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            hljs.highlightAll();
+        });
+    </script>
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1>Data Preprocessing</h1>
+        
+        <div class="select-container">
+            <label for="data-select" class="form-label">Select Data Type:</label>
+            <select id="data-select" onchange="showData()" class="styled-select">
+                <option value="kategori">Kategori</option>
+                <option value="crawl_subkategori">Crawl Subkategori</option>
+                <option value="sub_kategori">Sub Kategori</option>
+            </select>
+        </div>
+    
+        <div id="kategori-data" class="json-data">
+            <h3>Kategori</h3>
+            <pre><code class="json">{{ kategori | tojson(indent=4) }}</code></pre>
+        </div>
+        <div id="crawl-data" class="json-data" style="display:none;">
+            <h3>Crawl Subkategori</h3>
+            <pre><code class="json">{{ crawl_subkategori | tojson(indent=4) }}</code></pre>
+        </div>
+        <div id="subkategori-data" class="json-data" style="display:none;">
+            <h3>Sub Kategori</h3>
+            <pre><code class="json">{{ sub_kategori | tojson(indent=4) }}</code></pre>
+        </div>
+    </div>
+    
+    {% include 'footer.html' %}
+    
+    <script>
+        function showData() {
+            const dataType = document.getElementById('data-select').value;
+            document.querySelectorAll('.json-data').forEach(el => el.style.display = 'none');
+            if (dataType === 'kategori') {
+                document.getElementById('kategori-data').style.display = 'block';
+            } else if (dataType === 'crawl_subkategori') {
+                document.getElementById('crawl-data').style.display = 'block';
+            } else if (dataType === 'sub_kategori') {
+                document.getElementById('subkategori-data').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

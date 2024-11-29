@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1 class="title">Implementasi Web Crawling dan Algoritma BM25 untuk Pencarian Informasi  Pariwisata di Wikipedia</h1>
+        <p class="subtitle">Tugas Akhir Penambangan Dan Pencarian Web (Web Mining) </p>
+
+        <form action="{{ url_for('search') }}" method="get" class="form-container">
+            <label for="query" class="form-label">Search:</label>
+            <input type="text" name="query" id="query" placeholder="Enter search keywords" required class="input-field">
+            
+            <label for="n_results" class="form-label">Results to Display:</label>
+            <select name="n" id="n_results" class="input-field select-field">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+            
+            <button type="submit" class="btn-submit">Search</button>
+        </form>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

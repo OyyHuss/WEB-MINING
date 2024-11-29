@@ -1,0 +1,276 @@
+/* Body styling dengan background yang lebih tegas */
+body {
+    background-color: azure; /* Background yang tidak terlalu terang */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #003366; /* Dark blue navbar */
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #FFD700 !important; /* Aure (golden yellow) hover effect */
+}
+
+/* Navbar responsive */
+.navbar-toggler {
+    border-color: #FFD700;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Tombol utama dengan warna terang */
+button, .btn {
+    background-color: #FF6347; /* Red (Tomato) */
+    color: white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #FF4500; /* Red-Orange for hover */
+}
+
+/* Form styling untuk pencarian */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk card hasil pencarian */
+.result-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Type and result image in cards */
+.result-type {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.result-card img {
+    max-width: 120px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333; /* Black background for footer */
+    color: white;
+}
+
+/* Styling for page heading */
+h1 {
+    color: #003366; /* Dark blue color */
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h4 {
+    color: #FFD700; /* Aure/golden yellow */
+}
+
+/* Prettify the JSON display with a dark theme */
+pre {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    overflow-x: auto;
+}
+
+/* Custom styling for the select dropdown */
+.select-container {
+    margin-bottom: 20px;
+}
+
+.styled-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #003366;  /* Dark Blue */
+    background-color: #fff;
+    color: #003366;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect on the select box */
+.styled-select:focus {
+    border-color: #FFBF00; /* Yellow when focused */
+    background-color: #f5f5f5; /* Light grey */
+    outline: none;
+}
+
+/* Styling for the displayed data */
+pre code {
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Custom background color for the select dropdown */
+.styled-select option {
+    background-color: #fff;
+    color: #003366;
+}
+
+/* Hover effect for the select dropdown */
+.styled-select:hover {
+    border-color: #FF5733; /* Red color on hover */
+    background-color: #e6e6e6;
+}
+
+/* Apply different background color when hovering over options */
+.styled-select option:hover {
+    background-color: #FFBF00; /* Yellow on hover */
+    color: #fff;
+}
+
+/* Form container */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto;
+    background-color: #003366; /* Dark Blue */
+}
+
+/* Labels */
+.form-label {
+    color: #FFBF00; /* Yellow */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Input fields (Text and Select) */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #003366; /* Dark Blue border */
+    background-color: #ffffff; /* White background */
+    color: #003366; /* Dark Blue text color */
+}
+
+.input-field:focus {
+    border-color: #FFBF00; /* Yellow on focus */
+    outline: none;
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+/* Select field customization */
+.select-field {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Button Styling */
+.btn-submit {
+    background-color: #FF5733; /* Red */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #C70039; /* Darker Red */
+}
+
+
+/* Title and subtitle styling */
+.title {
+    color: #003366; /* Dark Blue */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #FFBF00; /* Yellow */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Styling for the footer */
+.footer {
+    margin-top: 20px;
+    background-color: #003366; /* Dark Blue */
+    color: #FFBF00; /* Yellow */
+    padding: 15px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px solid #FF5733; /* Red color border */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 90%;
+    }
+}

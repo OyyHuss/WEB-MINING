@@ -1,0 +1,42 @@
+				STEP BY STEP RUNNING PROYEK
+
+1. Run the command scrapy startproject pariwisata to create the project.
+
+2. In the folder pariwisata/pariwisata/spiders, run the kategori.py script in the terminal with the command:
+scrapy crawl pariwisata_kategori -o kategori.json
+This will generate the output in kategori.json.
+
+3. In the pariwisata/pariwisata/spiders folder, run the subkategori.py script in the terminal with the command:
+scrapy crawl pariwisata_subkategori -o subkategori.json
+This will generate the output in subkategori.json.
+
+4. In the pariwisata/pariwisata/spiders folder, run the crawl_subkategori.py script in the terminal with the command:
+scrapy crawl pariwisata_crawl_subkategori -o crawl_subkategori.json
+This will generate the output in crawl_subkategori.json.
+
+5. Combine the two JSON files (crawl_subkategori.json and kategori.json) by running the all_json.py script, which will generate the output file all.json.
+
+6. Go back to the pariwisata/pariwisata folder and create a new file called stopword.txt (the content is not important; it can be empty).
+
+7. Still in the pariwisata/pariwisata folder, run the bm25.py script in the terminal with the command:
+python bm25.py all.json indexdb
+This will generate the output as a pkl file (indexdb).
+
+8. Still in the pariwisata/pariwisata folder, run the query.py script in the terminal with the command:
+python query.py indexdb 5 "air terjun"
+This will execute the query and output the results.
+
+9. If you get results for the terms "air" and "terjun," the search has been successful.
+
+10. Move on to the UI (Flask) part.
+
+11. In the templates folder, run the UI or frontend code.
+
+12. In the static folder, store your CSS or JavaScript files.
+
+13. The app.py file is used to run the backend.
+
+14. Run app.py in the terminal with the command:
+python app.py
+
+15. You can now access the web search page.
